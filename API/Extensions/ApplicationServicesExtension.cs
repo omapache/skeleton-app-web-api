@@ -1,3 +1,6 @@
+using Dominio.Interfaces;
+using Aplicacion.UnitOfWork;
+
 namespace API.Extensions;
 public static class ApplicationServicesExtension
 {
@@ -9,4 +12,11 @@ public static class ApplicationServicesExtension
         .AllowAnyMethod()
         .AllowAnyHeader());
     });
+    public static void AddAplicacionServices(this IServiceCollection services)
+    {
+        //Services.AddScoped<IpaisInterface,PaisRepository>();
+        //Services.AddScoped<ITipoPersona,TipoPeronsaRepository>();
+        
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+    }
 }

@@ -5235,19 +5235,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\APT01-041\\.nuget\\packages\\": {}
+    "C:\\Users\\Owen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Aplicacion\\Aplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Aplicacion\\Aplicacion.csproj",
       "projectName": "Aplicacion",
-      "projectPath": "c:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Aplicacion\\Aplicacion.csproj",
-      "packagesPath": "C:\\Users\\APT01-041\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Aplicacion\\obj\\",
+      "projectPath": "C:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Aplicacion\\Aplicacion.csproj",
+      "packagesPath": "C:\\Users\\Owen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Aplicacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APT01-041\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Owen\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5259,11 +5259,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Dominio\\Dominio.csproj": {
-              "projectPath": "c:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\APT01-041\\Desktop\\A\\Dotnet\\skeleton-app-web-api\\Persistencia\\Persistencia.csproj"
+            "c:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "c:\\Users\\Owen\\Documents\\c#\\Dotnet\\Taller\\skeleton-app-web-api\\Persistencia\\Persistencia.csproj"
             }
           }
         }

@@ -10,3 +10,15 @@ C:\Users\APT01-041\Desktop\A\Dotnet\skeleton-app-web-api\Dominio\obj\Debug\net7.
 C:\Users\APT01-041\Desktop\A\Dotnet\skeleton-app-web-api\Dominio\obj\Debug\net7.0\refint\Dominio.dll
 C:\Users\APT01-041\Desktop\A\Dotnet\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.pdb
 C:\Users\APT01-041\Desktop\A\Dotnet\skeleton-app-web-api\Dominio\obj\Debug\net7.0\ref\Dominio.dll
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\bin\Debug\net7.0\Dominio.deps.json
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\bin\Debug\net7.0\Dominio.dll
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\bin\Debug\net7.0\Dominio.pdb
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfo.cs
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.dll
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\refint\Dominio.dll
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\Dominio.pdb
+C:\Users\Owen\Documents\c#\Dotnet\Taller\skeleton-app-web-api\Dominio\obj\Debug\net7.0\ref\Dominio.dll
