@@ -29,6 +29,23 @@ namespace Persistencia.Data.Configuration
             builder.HasOne(e => e.TipoPersona)
             .WithMany(p => p.Personas)
             .HasForeignKey(p => p.IdTipoPerFk);
+
+             builder
+            .HasMany(p => p.Salones)
+            .WithMany(p => p.Personas)
+            .UsingEntity<TrainerSalon>(
+                j => j
+                    .HasOne(pt => pt.Salon)
+                    .WithMany(t => t.TrainerSalones)
+                    .HasForeignKey(pt => pt.IdSalonFk),
+                j => j
+                    .HasOne(pt => pt.Persona)
+                    .WithMany(t => t.TrainerSalones)
+                    .HasForeignKey(pt => pt.IdPersonaTrainerFk),
+                j => 
+                {
+                    j.HasKey(t => new {t.IdSalonFk, t.IdPersonaTrainerFk});
+                });
         }
     }
 }

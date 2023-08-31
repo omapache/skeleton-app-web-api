@@ -24,7 +24,6 @@ namespace Persistencia.Data.Configuration
         .WithMany(p => p.TrainerSalones)
         .HasForeignKey(p => p.IdSalonFk);
 
-
         }
     }
 }

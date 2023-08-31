@@ -20,6 +20,8 @@ namespace Persistencia.Data.Configuration
 
             builder.Property(e => e.Capacidad)
             .HasColumnType("int");
+
+            
         }
     }
 }

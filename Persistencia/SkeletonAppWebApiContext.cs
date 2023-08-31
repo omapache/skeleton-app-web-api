@@ -1,3 +1,4 @@
+using System.Reflection;
 using Dominio.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,4 +17,9 @@ namespace Persistencia;
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Pais> Paises { get; set; }
         public DbSet<Genero> Generos { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
