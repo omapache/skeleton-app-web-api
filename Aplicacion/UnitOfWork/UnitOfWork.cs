@@ -8,7 +8,8 @@ public class UnitOfWork : IUnitOfWork, IDisposable
 {
     private readonly SkeletonAppWebApiContext context;
     private PaisRepository _paises;
-    private DepartamentoRepository _departamento;
+    private DepartamentoRepository _departamentos;
+    private CiudadRepository _ciudades;
 
 
     public UnitOfWork(SkeletonAppWebApiContext _context)
@@ -27,10 +28,20 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     public IDepartamento Departamentos
     {
         get{
-            if(_departamento == null){
-                _departamento = new DepartamentoRepository(context);
+            if(_departamentos == null){
+                _departamentos = new DepartamentoRepository(context);
             }
-            return _departamento;
+            return _departamentos;
+        }
+    }
+
+    public ICiudad Ciudades
+    {
+        get{
+            if(_ciudades == null){
+                _ciudades = new CiudadRepository(context);
+            }
+            return _ciudades;
         }
     }
     public void Dispose()

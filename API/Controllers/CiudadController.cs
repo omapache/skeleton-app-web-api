@@ -5,13 +5,12 @@ using API.Dtos;
 using Dominio.Entities;
 
 namespace API.Controllers;
-
-public class DepartamentoController : BaseApiController
+public class CiudadController : BaseApiController
 {
     private readonly IUnitOfWork unitofwork;
     private readonly  IMapper mapper;
 
-    public DepartamentoController(IUnitOfWork unitofwork, IMapper mapper)
+    public CiudadController(IUnitOfWork unitofwork, IMapper mapper)
     {
         this.unitofwork = unitofwork;
         this.mapper = mapper;
@@ -21,10 +20,10 @@ public class DepartamentoController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-    public async Task<ActionResult<IEnumerable<DepartamentoDto>>> Get()
+    public async Task<ActionResult<IEnumerable<CiudadDto>>> Get()
     {
-        var departamento = await unitofwork.Departamentos.GetAllAsync();
-        return mapper.Map<List<DepartamentoDto>>(departamento);
+        var ciudad = await unitofwork.Ciudades.GetAllAsync();
+        return mapper.Map<List<CiudadDto>>(ciudad);
     }
 
     [HttpGet("{id}")]
@@ -32,56 +31,56 @@ public class DepartamentoController : BaseApiController
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<ActionResult<DepartamentoDto>> Get(int id)
+    public async Task<ActionResult<CiudadDto>> Get(int id)
     {
-        var departamento = await unitofwork.Departamentos.GetByIdAsync(id);
-        if (departamento == null){
+        var ciudad = await unitofwork.Ciudades.GetByIdAsync(id);
+        if (ciudad == null){
             return NotFound();
         }
-        return this.mapper.Map<DepartamentoDto>(departamento);
+        return this.mapper.Map<CiudadDto>(ciudad);
     }
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-   public async Task<ActionResult<Departamento>> Post(DepartamentoDto departamentoDto)
+   public async Task<ActionResult<Ciudad>> Post(CiudadDto ciudadDto)
     {
-        var departamento = this.mapper.Map<Departamento>(departamentoDto);
-        this.unitofwork.Departamentos.Add(departamento);
+        var ciudad = this.mapper.Map<Ciudad>(ciudadDto);
+        this.unitofwork.Ciudades.Add(ciudad);
         await unitofwork.SaveAsync();
-        if(departamento == null)
+        if(ciudad == null)
         {
             return BadRequest();
         }
-        departamentoDto.Id = departamento.Id;
-        return CreatedAtAction(nameof(Post), new {id = departamentoDto.Id}, departamentoDto);
+        ciudadDto.Id = ciudad.Id;
+        return CreatedAtAction(nameof(Post), new {id = ciudadDto.Id}, ciudadDto);
     }
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<ActionResult<DepartamentoDto>> Put(int id, [FromBody]DepartamentoDto departamentoDto){
-        if(departamentoDto == null)
+    public async Task<ActionResult<CiudadDto>> Put(int id, [FromBody]CiudadDto ciudadDto){
+        if(ciudadDto == null)
         {
             return NotFound();
         }
-        var departamento = this.mapper.Map<Departamento>(departamentoDto);
-        unitofwork.Departamentos.Update(departamento);
+        var ciudad = this.mapper.Map<Ciudad>(ciudadDto);
+        unitofwork.Ciudades.Update(ciudad);
         await unitofwork.SaveAsync();
-        return departamentoDto;
+        return ciudadDto;
     }
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id){
-        var departamento = await unitofwork.Departamentos.GetByIdAsync(id);
-        if(departamento == null)
+        var ciudad = await unitofwork.Ciudades.GetByIdAsync(id);
+        if(ciudad == null)
         {
             return NotFound();
         }
-        unitofwork.Departamentos.Remove(departamento);
+        unitofwork.Ciudades.Remove(ciudad);
         await unitofwork.SaveAsync();
         return NoContent();
     }
